@@ -13,6 +13,7 @@
 		B4CF3FA8246CF68900F3CB14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CF3FA6246CF68900F3CB14 /* Main.storyboard */; };
 		B4CF3FAA246CF68A00F3CB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CF3FA9246CF68A00F3CB14 /* Assets.xcassets */; };
 		B4CF3FAD246CF68A00F3CB14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CF3FAB246CF68A00F3CB14 /* LaunchScreen.storyboard */; };
+		B4CF3FB7246CFAAC00F3CB14 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = B4CF3FB6246CFAAB00F3CB14 /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B4CF3FA9246CF68A00F3CB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4CF3FAC246CF68A00F3CB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4CF3FAE246CF68A00F3CB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4CF3FB6246CFAAB00F3CB14 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B4CF3FA2246CF68900F3CB14 /* SceneDelegate.swift */,
 				B4CF3FA4246CF68900F3CB14 /* ViewController.swift */,
 				B4CF3FA6246CF68900F3CB14 /* Main.storyboard */,
+				B4CF3FB6246CFAAB00F3CB14 /* pokemon.csv */,
 				B4CF3FA9246CF68A00F3CB14 /* Assets.xcassets */,
 				B4CF3FAB246CF68A00F3CB14 /* LaunchScreen.storyboard */,
 				B4CF3FAE246CF68A00F3CB14 /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				B4CF3FAD246CF68A00F3CB14 /* LaunchScreen.storyboard in Resources */,
 				B4CF3FAA246CF68A00F3CB14 /* Assets.xcassets in Resources */,
+				B4CF3FB7246CFAAC00F3CB14 /* pokemon.csv in Resources */,
 				B4CF3FA8246CF68900F3CB14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M226WNK72;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M226WNK72;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
