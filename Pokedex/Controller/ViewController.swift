@@ -59,9 +59,8 @@ extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell else {return UICollectionViewCell()}
-        
-        let pokemon = Pokemon(name: "Charmander", pokedexId: indexPath.item)
-        cell.configCell(pokemon: pokemon)
+        let poke = pokemon[indexPath.item]
+        cell.configCell(pokemon: poke)
         
         return cell
     }
