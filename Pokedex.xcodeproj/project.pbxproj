@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B436BDC0246E4E3400A94A11 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B436BDBF246E4E3400A94A11 /* pokemon.ttf */; };
+		B436BDC2246E4E3E00A94A11 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B436BDC1246E4E3E00A94A11 /* music.mp3 */; };
 		B4829A2D246E293100CD0993 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4829A2C246E293100CD0993 /* PokeCell.swift */; };
 		B4829A30246E2FC600CD0993 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4829A2F246E2FC600CD0993 /* csv.swift */; };
 		B4B5FDE7246D0840000D86C9 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FDE6246D0840000D86C9 /* Pokemon.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B436BDBF246E4E3400A94A11 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		B436BDC1246E4E3E00A94A11 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		B4829A2C246E293100CD0993 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		B4829A2F246E2FC600CD0993 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		B4B5FDE6246D0840000D86C9 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B436BDBE246E4E1F00A94A11 /* Rescources */ = {
+			isa = PBXGroup;
+			children = (
+				B436BDBF246E4E3400A94A11 /* pokemon.ttf */,
+				B436BDC1246E4E3E00A94A11 /* music.mp3 */,
+			);
+			path = Rescources;
+			sourceTree = "<group>";
+		};
 		B4829A2E246E2FBF00CD0993 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		B4CF3F9F246CF68900F3CB14 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				B436BDBE246E4E1F00A94A11 /* Rescources */,
 				B4829A2E246E2FBF00CD0993 /* Util */,
 				B4B5FDE5246D0832000D86C9 /* Model */,
 				B4B5FDE4246D082D000D86C9 /* View */,
@@ -169,7 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B436BDC0246E4E3400A94A11 /* pokemon.ttf in Resources */,
 				B4CF3FAD246CF68A00F3CB14 /* LaunchScreen.storyboard in Resources */,
+				B436BDC2246E4E3E00A94A11 /* music.mp3 in Resources */,
 				B4CF3FAA246CF68A00F3CB14 /* Assets.xcassets in Resources */,
 				B4CF3FB7246CFAAC00F3CB14 /* pokemon.csv in Resources */,
 				B4CF3FA8246CF68900F3CB14 /* Main.storyboard in Resources */,
