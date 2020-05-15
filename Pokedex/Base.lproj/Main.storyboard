@@ -152,6 +152,7 @@
                     <connections>
                         <outlet property="musicBtn" destination="bVf-BJ-Izu" id="2nB-Tg-5KS"/>
                         <outlet property="myCollectionView" destination="Eaw-FM-tGt" id="Oan-Z5-mFN"/>
+                        <outlet property="searchBar" destination="VfG-Gr-tlK" id="K6y-PQ-jLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
