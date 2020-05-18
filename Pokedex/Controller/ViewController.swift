@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 
 class ViewController: UIViewController{
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -19,6 +20,10 @@ class ViewController: UIViewController{
     var musicPlayer = AVAudioPlayer()
     var inSearchMode = false
     
+    //Second Data
+    let api = PokemonApi()
+    var pokemonRealData:Pokemon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myCollectionView.dataSource = self
@@ -27,6 +32,7 @@ class ViewController: UIViewController{
         searchBar.returnKeyType = UIReturnKeyType.done
         parsePokemonCSV()
         initAudio()
+        
     }
     
     func initAudio(){
@@ -50,7 +56,6 @@ class ViewController: UIViewController{
         do{
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            print(rows)
             
             for row in rows{
                 let pokeId = Int(row["id"]!)!
@@ -66,6 +71,15 @@ class ViewController: UIViewController{
     }
     
     @IBAction func musicBtnClicked(_ sender: Any) {
+        
+        api.getPokemon(url: URL_POKEMON + "/\(4)/") { (pokeJSON) in
+                     if let pokeJ = pokeJSON{
+                         //self.setupUI(pokemon: pokeJ)
+                        print(pokeJ.name)
+                        
+                     }
+                 }
+        
         if musicPlayer.isPlaying{
             musicPlayer.pause()
             musicBtn.alpha = 0.2
@@ -75,7 +89,21 @@ class ViewController: UIViewController{
         }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Identifier.toPokeDetail{
+            guard let pokeDetailVC = segue.destination as? PokemonDetailVC else {return}
+            if let poke = sender as? Pokemon{
+                pokeDetailVC.pokemon = poke
+            }
+        }
+    }
+    
+    //Side note do it on DidSelect Row :)
+    
+    func setupUI(pokemon:PokeJSON){
+        print(pokemon.name)
+    }
+    
 }
 
 extension ViewController:UISearchBarDelegate{
@@ -104,6 +132,17 @@ extension ViewController:UISearchBarDelegate{
 extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var poke:Pokemon!
+        
+        if inSearchMode{
+            poke = filterPokemon[indexPath.item]
+        }else{
+            poke = pokemon[indexPath.item]
+        }
+        
+        
+        
+        performSegue(withIdentifier: Identifier.toPokeDetail, sender: poke)
         
     }
     
