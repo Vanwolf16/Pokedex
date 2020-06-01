@@ -15,7 +15,7 @@ struct PokeJSON:Codable{
     let name:String
     let weight:Int
     let height:Int
-    let types:[String]
+    let types:[Type]
     /*
     let pokedexId:Int
     let description:String
@@ -26,4 +26,14 @@ struct PokeJSON:Codable{
     let attack:String
     let nextEvoTxt:String
     */
+}
+
+struct Type:Codable {
+    let slot:Int
+    let type:FullType!
+}
+
+struct FullType:Codable{
+    let name:String
+    let url:String
 }

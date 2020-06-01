@@ -47,7 +47,11 @@ class PokemonDetailVC: UIViewController {
         descriptionLbl.text = pokemon.name
         weightLbl.text = String(pokemon.weight)
         heightLbl.text = String(pokemon.height)
-        
+        if pokemon.types.count >= 2{
+            typeLbl.text = "\(pokemon.types[0].type.name)/\(pokemon.types[1].type.name)"
+        }else{
+            typeLbl.text = "\(pokemon.types[0].type.name)"
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {

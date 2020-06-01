@@ -38,5 +38,8 @@ class PokemonApi{
             
         }
         
-    }
+    }//end of this function getPokemon
+    
+    
+    
 }
